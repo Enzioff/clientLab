@@ -1,0 +1,52 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 30px;
+  min-width: 180px;
+
+  @include text(var(--white));
+
+  background-color: var(--blue);
+  border-radius: $r-30;
+  cursor: pointer;
+
+  &--orange {
+    background-color: var(--orange);
+  }
+
+  &--inverted {
+    background-color: var(--white);
+    color: var(--blue);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--blue);
+
+    svg {
+      width: 8px;
+      height: 7px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &--mob-wide {
+    @include r($mobile) {
+      width: 100%;
+    }
+  }
+
+  &--down {
+    .button__icon {
+      transform: rotate(90deg);
+    }
+  }
+}

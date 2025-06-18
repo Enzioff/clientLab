@@ -1,0 +1,101 @@
+.editor {
+  li, a, p, span {
+    @include text(var(--text-black), 20px, 300, none);
+
+    @include r($mobile) {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  p {
+    a {
+      color: var(--blue);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 25px;
+
+    li {
+    }
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: decimal;
+    padding-left: 25px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--text-black);
+
+    @include r($mobile) {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    a {
+      font: inherit;
+      text-decoration: underline;
+    }
+
+    b {
+      color: var(--orange);
+    }
+  }
+
+  &--text {
+    li, a, p, span {
+      color: var(--text-black);
+
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &-bold {
+      li, a, p, span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+
+        color: var(--text-black);
+
+        @include r($mobile) {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &--longrid {
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 30px;
+      @include text(var(--text-black), 36px, 500);
+    }
+
+    p, li, span, a {
+      @include text(var(--text-black), 16px, 300, none, 22px);
+
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+}

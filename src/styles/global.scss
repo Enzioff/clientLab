@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 366px;
+  min-height: 100vh;
+
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $black;
+
+  background-color: $bg;
+
+  overflow-x: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  overflow-x: clip;
+
+  &--offset {
+    padding-top: 100px;
+  }
+}
+
+svg {
+  display: flex;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.mob-hidden {
+  @include r($mobile) {
+    display: none !important;
+  }
+}
+
+.desktop-hidden {
+  @include rmin($mobile + 1) {
+    display: none;
+  }
+}
+
+.desktop-min-hidden {
+  @include rmin($mob-min + 1) {
+    display: none;
+  }
+}
+
+.fixed {
+  overflow: hidden;
+
+  @include r($mobile) {
+    padding-right: 0 !important;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+[data-content] {
+  height: 0;
+  overflow: hidden;
+
+  &.active {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+*[disabled] {
+  pointer-events: none;
+  opacity: .5;
+}
+
+.text-visible {
+  -webkit-line-clamp: none;
+  line-clamp: none;
+}
+
+.center {
+  justify-self: center;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.order-mob-0 {
+  @include r($mobile) {
+    order: 0;
+  }
+}
+
+.order-mob-1 {
+  @include r($mobile) {
+    order: 1;
+  }
+}
+
+.order-mob-2 {
+  @include r($mobile) {
+    order: 2;
+  }
+}

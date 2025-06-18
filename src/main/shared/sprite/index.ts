@@ -1,0 +1,14 @@
+import "./icon-arrow-btn.svg";
+import "./icon-arrow-down.svg";
+import "./icon-arrow-right.svg";
+import "./icon-behance.svg";
+import "./icon-clock.svg";
+import "./icon-graph.svg";
+import "./icon-mail.svg";
+import "./icon-phone.svg";
+import "./icon-pin.svg";
+import "./icon-play.svg";
+import "./icon-tg.svg";
+import "./icon-vk.svg";
+import "./icon-wallet.svg";
+import "./icon-whatsapp.svg";
