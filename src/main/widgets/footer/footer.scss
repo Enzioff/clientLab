@@ -1,3 +1,95 @@
 .footer {
+  background: $black;
+  border-radius: $r-30;
 
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 70px 0 33px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  &__logo {
+    display: flex;
+    width: 209px;
+    height: 56px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 274px 1fr;
+    gap: 220px;
+  }
+
+  &__text {
+    @include text(rgba($white, .65), 15px, 400, none, 26px);
+    letter-spacing: -0.1px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(100px, 217px));
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include text($white, 15px, 400, none);
+
+    svg {
+      display: flex;
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__social-link {
+    display: flex;
+    width: 32px;
+    height: 32px;
+  }
 }

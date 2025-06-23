@@ -1,0 +1,15 @@
+.useful {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__text {
+    font-family: Gilroy;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0%;
+
+    @include text(#848A9B, 16px, 500, none, 150%);
+  }
+}

@@ -1,9 +1,11 @@
-import Slider from "./slider";
 import {Fancybox} from "@fancyapps/ui";
+import Slider from "./slider";
 import Mask from "./mask";
 import Header from "./header";
 import Faq from "./faq";
 import Tabs from "./tabs";
+import Bubbles from "./bubbles";
+import Video from "./video";
 
 class App {
     constructor() {
@@ -17,6 +19,26 @@ class App {
         this.createHeader()
         this.createFaqBlock()
         this.createTabs()
+        this.createBubbles()
+        this.createVideo()
+    }
+    
+    createVideo = () => {
+        const videoContainer = document.querySelectorAll('[data-video-container]')
+        
+        if (!videoContainer) return;
+        
+        videoContainer.forEach(el => {
+            new Video(el)
+        })
+    }
+    
+    createBubbles = () => {
+        const bubblesContainer = document.querySelector('[data-bubbles]');
+        
+        if (!bubblesContainer) return;
+        
+        new Bubbles(bubblesContainer);
     }
     
     createFaqBlock = () => {

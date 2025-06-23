@@ -1,0 +1,51 @@
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+
+    $max_count: 10;
+    @for $i from 1 through $max_count {
+      .examples__tab {
+        &:nth-child(#{$i}) {
+          margin-left: -22px;
+          z-index: $max_count - $i;
+        }
+        &:nth-child(1) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 46px;
+    @include text($gray, 18px, 500, none, 150%);
+    border-radius: 100px;
+    border: 1px solid $gray;
+    cursor: pointer;
+    background-color: $white;
+    transition: .2s linear;
+    z-index: 1;
+
+    &.active {
+      color: $white;
+      background-color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  &__item {
+    display: none;
+
+    &.active {
+    display: flex;
+  }
+  }
+}

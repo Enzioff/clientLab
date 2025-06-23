@@ -1,0 +1,122 @@
+.portfolio-item {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 880px 1fr;
+  gap: 20px;
+
+  &__preview {
+    position: relative;
+    display: flex;
+    padding: 80px 0 0 80px;
+    height: 100%;
+    max-height: 700px;
+    background-color: $bg-gray;
+    background-image: url("../assets/images/portfolio-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: $r-30;
+    overflow: hidden;
+  }
+
+  &__toolbar {
+    display: flex;
+    margin-bottom: -1px;
+  }
+
+  &__photo {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 1064px;
+    pointer-events: none;
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px 34px;
+    border-radius: $r-30;
+    border: 1px solid rgba($white, .5);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    &:first-child {
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba($white, .5);
+    }
+
+    &:last-child {
+      padding-top: 24px;
+    }
+  }
+
+  &__el {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__value {
+    @include text($white, 40px, 700);
+  }
+
+  &__text {
+    @include text(rgba($white, .5), 16px, 500);
+
+    &--accent {
+      @include text($white, 18px, 500);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 30px 40px 32px;
+    background-color: $white;
+    border-radius: $r-30;
+
+    .portfolio-item__text {
+      @include text(rgba($black, .5), 18px, 500, none, 140%);
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__title {
+    @include text($black, 20px, 600, none, 170%);
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

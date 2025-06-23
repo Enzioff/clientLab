@@ -1,0 +1,14 @@
+.show-more {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  @include text($primary, 16px, 700);
+  cursor: pointer;
+
+  svg {
+    display: flex;
+    width: 20px;
+    height: 20px;
+  }
+}

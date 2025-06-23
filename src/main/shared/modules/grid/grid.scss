@@ -5,6 +5,10 @@
   gap: 30px;
   width: 100%;
 
+  &--center {
+    align-items: center;
+  }
+
   @include rmin($mobile + 1) {
     @for $i from 1 through 12 {
       .grid__item--#{$i} {

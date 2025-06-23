@@ -1,3 +1,18 @@
 .header {
+  display: flex;
+  padding: 14px 0;
+  height: 78px;
+  background-color: $header-bg;
 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
 }

@@ -6,16 +6,26 @@ $font-main: "Gilroy", sans-serif;
 // Переменные
 $white: #FFFFFF;
 $dark: #222222;
+$header-bg: #F8F8F8;
 $bg: #FFFFFF;
 $bg-gray: #F9FAFB;
 $black: #141C24;
 $primary: #4D3EDB;
 $primary-dark: #332EAE;
+$primary-light: #F0EEFF;
+$primary-btn: #E2ECFF;
 $gray: #ACB2C3;
 $gray-dark: #E7F1FD;
+$gray-light: #BCBCBC;
 $text-light: #A2A2BF;
 $blue: #0269FF;
+$blue-vk: #0277FF;
 $blue-dark: #3B5774;
+$blue-dark-second: #3A5773;
+$line-color: #E7E7F8;
+$orange: #FC3F1D;
+$border: #F5F5F5;
+$outline: #222B49;
 $intro-gradient: linear-gradient(0deg, #141C24, #141C24), linear-gradient(107.47deg, #292749 15.62%, #141C24 62.66%);
 
 $r-30: 30px;
@@ -27,12 +37,20 @@ $mobile: 1199;
 $mob-min: 767;
 
 // Миксины
+@mixin defaultHover() {
+  transition: .2s linear;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
 @mixin blur($background: #FFFFFF) {
   background-color: rgba($background, .05);
   backdrop-filter: blur(20px);
 }
 
-@mixin text($color: var(--black), $size: 14px, $weight: 400, $textTransform: uppercase, $line-height: 100%) {
+@mixin text($color: $black, $size: 20px, $weight: 500, $textTransform: none, $line-height: 100%) {
   font-family: $font-main;
   font-weight: $weight;
   font-size: $size;
@@ -90,7 +108,7 @@ $mob-min: 767;
   order: $num;
 }
 
-@for $i from 1 through 200 {
+@for $i from 1 through 300 {
   .order-#{$i} {
     @include order($i);
   }
@@ -102,7 +120,7 @@ $mob-min: 767;
   }
 }
 
-@for $i from 1 through 200 {
+@for $i from 1 through 300 {
   .order-mob-#{$i} {
     @include order-mob($i);
   }
@@ -112,7 +130,7 @@ $mob-min: 767;
   padding-top: math.div($size, 16) * 1rem;
 }
 
-@for $i from 1 through 200 {
+@for $i from 1 through 300 {
   .pt-#{$i} {
     @include pt($i);
   }
@@ -124,7 +142,7 @@ $mob-min: 767;
   }
 }
 
-@for $i from 0 through 200 {
+@for $i from 0 through 300 {
   .ptm-#{$i} {
     @include ptm($i);
   }
@@ -134,7 +152,7 @@ $mob-min: 767;
   padding-bottom: math.div($size, 16) * 1rem;
 }
 
-@for $i from 1 through 200 {
+@for $i from 1 through 300 {
   .pb-#{$i} {
     @include pb($i);
   }
@@ -146,7 +164,7 @@ $mob-min: 767;
   }
 }
 
-@for $i from 0 through 200 {
+@for $i from 0 through 300 {
   .pbm-#{$i} {
     @include pbm($i);
   }
@@ -156,7 +174,7 @@ $mob-min: 767;
   margin-top: math.div($size, 16) * 1rem;
 }
 
-@for $i from 1 through 200 {
+@for $i from 1 through 300 {
   .mt-#{$i} {
     @include mt($i);
   }
@@ -168,7 +186,7 @@ $mob-min: 767;
   }
 }
 
-@for $i from 0 through 200 {
+@for $i from 0 through 300 {
   .mtm-#{$i} {
     @include mtm($i);
   }
@@ -178,7 +196,7 @@ $mob-min: 767;
   margin-bottom: math.div($size, 16) * 1rem;
 }
 
-@for $i from 1 through 200 {
+@for $i from 1 through 300 {
   .mb-#{$i} {
     @include mb($i);
   }
@@ -190,7 +208,7 @@ $mob-min: 767;
   }
 }
 
-@for $i from 0 through 200 {
+@for $i from 0 through 300 {
   .mbm-#{$i} {
     @include mbm($i);
   }

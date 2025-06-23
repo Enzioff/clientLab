@@ -1,0 +1,17 @@
+.input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 19px 20px;
+  @include text($black, 16px, 400, none, 140%);
+  background: $white;
+  border-radius: $r-10;
+
+  &::placeholder {
+    color: $text-light;
+  }
+
+  &--area {
+    min-height: 85px;
+  }
+}

@@ -1,0 +1,55 @@
+.article-example {
+  display: flex;
+  border-radius: 30px;
+  background-color: $bg-gray;
+  overflow: hidden;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 70px;
+  }
+
+  &__title {
+    @include text($black, 40px, 600);
+    letter-spacing: -1px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ECECEC;
+
+    span {
+      @include text(#A5ABBC, 16px, 500, none, 170%);
+
+      &:last-child {
+        font-weight: 700;
+        color: $black;
+      }
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: $r-30;
+    overflow: hidden;
+
+    img {
+      @include coverFull();
+    }
+  }
+}

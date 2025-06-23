@@ -1,0 +1,32 @@
+.feedback {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 60px 130px 60px 100px;
+  background-color: #F4F6FB;
+  background-image: url("../assets/images/feedback-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: $r-30;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    max-width: 671px;
+
+    .text {
+      max-width: 570px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 420px;
+  }
+}

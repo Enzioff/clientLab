@@ -1,0 +1,14 @@
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  @include text($blue-dark, 12px, 500);
+  background-color: rgba($gray-dark, .5);
+  border-radius: 100px;
+
+  &--big {
+    padding: 8px 18px;
+    @include text($blue-dark-second, 18px, 600, none, 150%)
+  }
+}

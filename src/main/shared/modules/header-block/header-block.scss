@@ -1,0 +1,11 @@
+.header-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  &--column {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

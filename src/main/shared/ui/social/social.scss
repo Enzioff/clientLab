@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &__link {
+    color: $white;
+
+    svg {
+      display: flex;
+      width: 25px;
+      height: 25px;
+    }
+
+    @include defaultHover();
+  }
+}

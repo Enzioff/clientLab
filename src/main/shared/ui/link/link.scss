@@ -1,0 +1,8 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  @include text($gray-light, 14px, 500, none, 16px);
+  @include defaultHover();
+}

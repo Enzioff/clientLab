@@ -1,11 +1,19 @@
 .text {
-  @include text(var(--text-black), 16px, 300, none, 22px);
+  @include text(black, 20px, 500);
 
   &--small {
-    @include text(var(--text-black), 14px, 400);
+    @include text(black, 16px, 500, none, 140%);
   }
 
-  &--gray {
-    color: var(--grey-dark-light);
+  a {
+    color: $primary;
+  }
+
+  &--light {
+    color: $white;
+  }
+
+  &--offset {
+    line-height: 150%;
   }
 }

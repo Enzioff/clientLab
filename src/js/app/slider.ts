@@ -1,5 +1,6 @@
 import Swiper from "swiper";
 import {Autoplay, EffectCoverflow, Navigation, Pagination, Thumbs} from "swiper/modules";
+import {SwiperSlide} from "swiper/swiper-element";
 
 class Slider {
     el;
@@ -21,10 +22,10 @@ class Slider {
         this.el = el as HTMLElement;
         this.sliderType = this.el.getAttribute('data-slider');
         this.slidesCount = this.el.getAttribute('data-slides')
-        this.offset = this.el.hasAttribute('data-offset');
+        this.offset = this.el.getAttribute('data-offset');
         this.isAuto = this.el.hasAttribute('data-auto');
         this.isDoubleControl = this.el.hasAttribute('data-double')
-
+        
         this.buttonPrev = this.el.querySelector('.swiper-btn--prev');
         this.buttonNext = this.el.querySelector('.swiper-btn--next');
         this.pagination = this.el.querySelector('.swiper-pagination');
@@ -47,20 +48,17 @@ class Slider {
         case 'default':
             this.initDefaultSlider();
             break;
-        case 'poster':
-            this.initPosterSlider();
-            break;
-        case 'pickYourRoute':
-            this.initPickYourRouteSlider();
-            break;
-        case 'attractions':
-            this.initAttractionsSlider();
+        case 'infinite':
+            this.initInfiniteSlider();
             break;
         case 'enhanced':
             this.initEnhancedSlider();
             break;
         case 'thumbs':
             this.initThumbsSlider();
+            break;
+        case 'reviews':
+            this.initReviewsSlider();
             break;
         }
     }
@@ -101,11 +99,11 @@ class Slider {
         new Swiper(slider, {
             modules: [Navigation, Pagination, Autoplay],
             slidesPerView: 'auto',
-            spaceBetween: 16,
+            spaceBetween: this.offset || 30,
             navigation: {
                 prevEl: this.buttonPrev,
                 nextEl: this.buttonNext,
-                disabledClass: 'slider__btn--disabled'
+                disabledClass: 'swiper-btn--disabled'
             },
             autoplay: this.isAuto ? {delay: 3000} : undefined,
             loop: this.isAuto ? this.isAuto : false,
@@ -118,67 +116,32 @@ class Slider {
                     swiper.update()
                 }
             },
-            breakpoints: {
-                1200: {
-                    slidesPerView: this.slidesCount ? this.slidesCount : 1,
-                    spaceBetween: this.offset ? this.offset : 40,
-                }
-            }
         })
     }
-
-    initPosterSlider() {
+    
+    initReviewsSlider() {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
-            modules: [Navigation],
+            modules: [],
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            loop: true,
+        })
+    }
+    
+    initInfiniteSlider() {
+        const slider = this.el.querySelector('.swiper');
+        new Swiper(slider, {
+            modules: [Autoplay],
+            loop: true,
             slidesPerView: 'auto',
-            spaceBetween: 30,
+            spaceBetween: 78,
             watchSlidesProgress: true,
-            navigation: {
-                prevEl: this.buttonPrev,
-                nextEl: this.buttonNext,
-                disabledClass: 'slider__btn--disabled'
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
             },
-        })
-    }
-
-    initPickYourRouteSlider() {
-        const slider = this.el.querySelector('.swiper');
-        new Swiper(slider, {
-            modules: [Navigation],
-            slidesPerView: 1,
-            spaceBetween: 30,
-            watchSlidesProgress: true,
-            navigation: {
-                prevEl: this.buttonPrev,
-                nextEl: this.buttonNext,
-                disabledClass: 'slider__btn--disabled'
-            },
-            breakpoints: {
-                1199: {
-                    slidesPerView: 'auto',
-                }
-            },
-        })
-    }
-
-    initAttractionsSlider() {
-        const slider = this.el.querySelector('.swiper');
-        new Swiper(slider, {
-            modules: [Navigation],
-            slidesPerView: 1,
-            spaceBetween: 30,
-            watchSlidesProgress: true,
-            navigation: {
-                prevEl: this.buttonPrev,
-                nextEl: this.buttonNext,
-                disabledClass: 'slider__btn--disabled'
-            },
-            breakpoints: {
-                1199: {
-                    slidesPerView: 3,
-                }
-            },
+            speed: 3500,
         })
     }
 

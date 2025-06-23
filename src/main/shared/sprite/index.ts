@@ -1,5 +1,6 @@
 import "./icon-arrow-btn.svg";
 import "./icon-arrow-down.svg";
+import "./icon-arrow-chevrone.svg";
 import "./icon-arrow-right.svg";
 import "./icon-behance.svg";
 import "./icon-clock.svg";

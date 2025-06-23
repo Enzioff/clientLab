@@ -1,0 +1,17 @@
+.subtitle {
+  display: inline-block;
+  max-width: 780px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  letter-spacing: 0;
+  color: $white;
+
+  &--big {
+    @include text($white, 32px, 500, none, 130%);
+  }
+
+  &--gray {
+    color: #5E5E5E;
+  }
+}

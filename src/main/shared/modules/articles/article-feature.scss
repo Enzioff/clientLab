@@ -1,0 +1,46 @@
+.article-feature {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  gap: 20px;
+  padding: 60px;
+  background: $white;
+  border-radius: $r-30;
+
+  &__title {
+    @include text($black, 26px, 600, none, 130%);
+    letter-spacing: -1%;
+
+    span {
+      color: $primary;
+    }
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    max-width: 522px;
+    @include text(#848A9B, 18px, 500, none, 150%);
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__el {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    svg {
+      display: flex;
+      width: 23px;
+      height: 23px;
+    }
+
+    span {
+      @include text($black, 14px, 600, none, 170%);
+    }
+  }
+}

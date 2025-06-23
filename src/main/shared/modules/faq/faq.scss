@@ -1,0 +1,86 @@
+.faq {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 20px;
+
+  &__item {
+    display: grid;
+    grid-template-rows: auto 0fr;
+    align-items: start;
+    transition: grid-template-rows .2s ease, padding-bottom .3s ease;
+    padding: 30px;
+    background-color: rgba($bg-gray, .7);
+    border-radius: $r-10;
+    overflow: hidden;
+
+    &.active {
+      grid-template-rows: auto 1fr;
+      padding-bottom: 30px;
+
+      .faq__header {
+        padding-bottom: 20px;
+      }
+
+      .faq__title {
+        color: $primary;
+      }
+      .faq__button::after {
+        transform: rotate(0deg);
+      }
+
+      .faq__content {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 0;
+    cursor: pointer;
+  }
+
+  &__button {
+    position: relative;
+    display: flex;
+    width: 18px;
+    height: 18px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 2px;
+      background-color: $primary;
+      transition: .2s ease;
+    }
+
+    &::before {
+      top: 8px;
+      left: 0;
+    }
+
+    &::after {
+      top: 8px;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__title {
+    @include text($black, 24px, 600, none, 120%);
+    transition: .2s ease;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-rows: auto 0fr;
+    min-height: 0;
+    @include text(#848A9B, 20px, 500, none, 30px);
+    overflow: hidden;
+    visibility: hidden;
+  }
+}

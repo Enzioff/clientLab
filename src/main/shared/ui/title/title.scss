@@ -1,46 +1,10 @@
 .title {
-  font-family: $font-main;
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 100%;
-  text-transform: uppercase;
-  color: var(--text-black);
-
-  &--big {
-    font-size: 56px;
-  }
-
-  &--medium {
-    font-size: 48px;
-  }
-
-  &--small {
-    font-size: 36px;
-  }
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 150%;
+  color: $black;
 
   &--light {
-    color: var(--white);
-  }
-
-  &--green {
-    span {
-      color: var(--green);
-    }
-  }
-
-  &--orange {
-    span {
-      color: var(--orange);
-    }
-  }
-
-  b {
-    color: var(--orange);
-  }
-
-  @include r($mobile) {
-    font-weight: 700;
-    font-size: 33px;
-    line-height: 100%;
+    color: $white;
   }
 }
