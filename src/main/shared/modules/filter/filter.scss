@@ -1,0 +1,15 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 30px;
+
+  &__item {
+    @include text($gray, 18px, 600, none, 150%);
+    letter-spacing: -2%;
+
+    &.active {
+      color: $blue;
+    }
+  }
+}

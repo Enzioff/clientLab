@@ -4,6 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger"
 class ServicesAnimation {
     static init() {
         const triggerContainer = document.querySelector('.services-trigger');
+        if (!triggerContainer) return;
         const benefits = triggerContainer.querySelectorAll(".article-benefit");
         const offset = 200;
         
@@ -28,6 +29,12 @@ class ServicesAnimation {
                         duration: 0.5
                     });
                 },
+                onEnterBack: () => {
+                    gsap.to(Array.from(benefits).slice(idx + 1), {
+                        y: `-=${offset}`,
+                        duration: 0.5
+                    });
+                }
             })
         })
     }
