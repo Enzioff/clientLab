@@ -11,4 +11,12 @@
     padding: 8px 18px;
     @include text($blue-dark-second, 18px, 600, none, 150%)
   }
+
+  &--light {
+    background: $gray-dark;
+  }
+
+  &--medium {
+    @include text($blue-dark, 16px, 500, none, 100%)
+  }
 }

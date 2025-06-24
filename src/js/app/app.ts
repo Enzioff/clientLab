@@ -6,6 +6,7 @@ import Faq from "./faq";
 import Tabs from "./tabs";
 import Bubbles from "./bubbles";
 import Video from "./video";
+import Animator from "./gsap";
 
 class App {
     constructor() {
@@ -21,6 +22,11 @@ class App {
         this.createTabs()
         this.createBubbles()
         this.createVideo()
+        this.createAnimator()
+    }
+    
+    createAnimator = () => {
+        new Animator();
     }
     
     createVideo = () => {
