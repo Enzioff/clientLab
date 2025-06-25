@@ -1,20 +1,13 @@
 .editor {
-  li, a, p, span {
-    @include text(var(--text-black), 20px, 300, none);
+  li, p, span {
+    @include text(#505A65, 18px, 500, none, 170%);
 
-    @include r($mobile) {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-
-  p {
     a {
-      color: var(--blue);
-
+      font: inherit;
+      color: $primary;
+      text-decoration: underline;
       &:hover {
-        text-decoration: underline;
+        opacity: .7;
       }
     }
   }
@@ -38,64 +31,15 @@
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    color: var(--text-black);
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -1%;
+    color: $black;
 
     @include r($mobile) {
       font-weight: 700;
       font-size: 14px;
       line-height: 100%;
-    }
-
-    a {
-      font: inherit;
-      text-decoration: underline;
-    }
-
-    b {
-      color: var(--orange);
-    }
-  }
-
-  &--text {
-    li, a, p, span {
-      color: var(--text-black);
-
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    &-bold {
-      li, a, p, span {
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 26px;
-
-        color: var(--text-black);
-
-        @include r($mobile) {
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 24px;
-        }
-      }
-    }
-  }
-
-  &--longrid {
-    h1, h2, h3, h4, h5, h6 {
-      margin-bottom: 30px;
-      @include text(var(--text-black), 36px, 500);
-    }
-
-    p, li, span, a {
-      @include text(var(--text-black), 16px, 300, none, 22px);
-
-      b {
-        font-weight: 600;
-      }
     }
   }
 }

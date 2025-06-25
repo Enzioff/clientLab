@@ -3,6 +3,15 @@
   flex-direction: column;
   gap: 14px;
 
+  &--light {
+    .article-project__category {
+      color: $primary-btn;
+    }
+    .article-project__title {
+      color: $white;
+    }
+  }
+
   &__info {
     display: flex;
     flex-direction: column;

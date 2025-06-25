@@ -29,6 +29,14 @@
     border-radius: $r-15;
   }
 
+  &--aside {
+    min-width: auto;
+    padding: 15px 20px;
+    @include text($white, 16px, 600, none, 100%);
+    letter-spacing: -2%;
+    border-radius: $r-15;
+  }
+
   &--light {
     color: $primary;
     background-color: $primary-light;

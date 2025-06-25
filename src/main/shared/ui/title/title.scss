@@ -7,4 +7,10 @@
   &--light {
     color: $white;
   }
+
+  &--big {
+    font-size: 70px;
+    letter-spacing: -1px;
+    line-height: 110%;
+  }
 }

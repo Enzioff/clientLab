@@ -1,6 +1,5 @@
 import Swiper from "swiper";
-import {Autoplay, EffectCoverflow, Navigation, Pagination, Thumbs} from "swiper/modules";
-import {SwiperSlide} from "swiper/swiper-element";
+import {Autoplay, Navigation, Pagination, Thumbs} from "swiper/modules";
 
 class Slider {
     el;
@@ -98,7 +97,7 @@ class Slider {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
             modules: [Navigation, Pagination, Autoplay],
-            slidesPerView: 'auto',
+            slidesPerView: this.slidesCount || 'auto',
             spaceBetween: this.offset || 30,
             navigation: {
                 prevEl: this.buttonPrev,

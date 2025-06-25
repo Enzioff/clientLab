@@ -1,0 +1,36 @@
+.aside-feedback {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  max-width: 400px;
+  padding: 34px;
+  background: $bg-gray;
+  border-radius: $r-20;
+  border: 1px solid $border;
+
+  &__title {
+    margin-bottom: 16px;
+    @include text($black, 24px, 700, none, 130%);
+    letter-spacing: -1%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__text {
+    @include text($black, 20px, 500, none, 130%);
+    letter-spacing: -1%;
+  }
+}
