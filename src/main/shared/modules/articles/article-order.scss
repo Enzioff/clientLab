@@ -1,0 +1,56 @@
+.article-order {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px;
+  border-radius: $r-20;
+  background-color: $bg-gray;
+  border: 1px solid #E3E0FF;
+
+  &--accent {
+    background: linear-gradient(268.29deg, #292749 42.9%, #141C24 75.94%);
+
+    .article-order__title,
+    .article-order__price,
+    .article-order__text,
+    .article-order__head {
+      color: $white;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    max-width: 1105px;
+  }
+
+  &__title,
+  &__price {
+    @include text($primary, 32px, 600, none, 150%);
+    letter-spacing: -1%;
+  }
+
+  &__head {
+    @include text($black, 20px, 700, none, 130%);
+    letter-spacing: -1%;
+  }
+
+  &__text {
+    @include text($black, 20px, 500, none, 140%);
+  }
+}

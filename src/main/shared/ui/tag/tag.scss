@@ -16,7 +16,16 @@
     background: $gray-dark;
   }
 
+  &--white {
+    background-color: $white;
+  }
+
   &--medium {
     @include text($blue-dark, 16px, 500, none, 100%)
+  }
+
+  &--primary {
+    color: $white;
+    background-color: $primary;
   }
 }

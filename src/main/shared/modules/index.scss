@@ -16,6 +16,8 @@
 @import './features/features';
 @import './services/services';
 @import './filter/filter';
+@import './orders/orders';
+@import './info-block/info-block';
 
 @import './grid/grid';
 @import './nav/nav';
@@ -28,5 +30,6 @@
 @import './articles/article-benefit';
 @import './articles/article-project';
 @import './articles/article-post';
+@import './articles/article-order';
 
 @import './asides/aside-feedback';
