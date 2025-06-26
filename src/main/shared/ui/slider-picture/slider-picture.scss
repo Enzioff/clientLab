@@ -1,0 +1,13 @@
+.slider-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 511px;
+  overflow: hidden;
+  border-radius: $r-20;
+
+  img {
+    @include coverFull();
+  }
+}

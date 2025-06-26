@@ -5,7 +5,6 @@
     a {
       font: inherit;
       color: $primary;
-      text-decoration: underline;
       &:hover {
         opacity: .7;
       }
@@ -13,11 +12,9 @@
   }
 
   ul {
+    margin-bottom: 30px;
     list-style: disc;
     padding-left: 25px;
-
-    li {
-    }
   }
 
   ol {
@@ -41,5 +38,24 @@
       font-size: 14px;
       line-height: 100%;
     }
+  }
+
+  img {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-shrink: 0;
+    width: 490px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #DDDDDD;
+    border-radius: $r-20;
+  }
+
+  &__preview {
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 }

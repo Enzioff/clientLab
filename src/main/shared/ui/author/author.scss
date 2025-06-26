@@ -1,0 +1,56 @@
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &--light {
+    .author__name,
+    .author__time {
+      color: $white;
+
+      &::before {
+        background-color: $white;
+      }
+    }
+  }
+
+  &__picture {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    overflow: hidden;
+
+    img {
+      @include coverFull();
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__name {
+    @include text($black, 15px, 600, none, 150%);
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @include text($black, 15px, 600, none, 150%);
+
+    &::before {
+      content: '';
+      display: flex;
+      width: 4px;
+      height: 4px;
+      background-color: $black;
+      border-radius: 100px;
+    }
+  }
+}

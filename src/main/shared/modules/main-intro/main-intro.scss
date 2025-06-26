@@ -7,11 +7,19 @@
   width: 100%;
   height: 100%;
 
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 620px;
+    gap: 80px;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
     margin-bottom: 60px;
+    max-width: 830px;
   }
 
   &__meta {
@@ -20,6 +28,10 @@
     align-self: flex-end;
     gap: 40px;
     margin-bottom: 128px;
+
+    &--offset {
+      margin-bottom: 30px;
+    }
   }
 
   &__nav {

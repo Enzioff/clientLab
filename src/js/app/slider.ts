@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import {Autoplay, Navigation, Pagination, Thumbs} from "swiper/modules";
+import {Autoplay, EffectCards, Navigation, Pagination, Thumbs} from "swiper/modules";
 
 class Slider {
     el;
@@ -59,7 +59,31 @@ class Slider {
         case 'reviews':
             this.initReviewsSlider();
             break;
+        case 'cards':
+            this.initCardsSlider();
+            break;
         }
+    }
+    
+    initCardsSlider() {
+        const slider = this.el.querySelector('.swiper');
+        new Swiper(slider, {
+            modules: [Navigation, EffectCards],
+            slidesPerView: 1,
+            spaceBetween: 35,
+            watchSlidesProgress: true,
+            effect: "cards",
+            cardsEffect: {
+                perSlideOffset: 12,
+                perSlideRotate: 0,
+                rotate: false,
+            },
+            navigation: {
+                prevEl: this.buttonPrev,
+                nextEl: this.buttonNext,
+                disabledClass: 'swiper-btn--disabled'
+            },
+        })
     }
 
     initIntroSlider() {
@@ -72,7 +96,7 @@ class Slider {
             navigation: {
                 prevEl: this.buttonPrev,
                 nextEl: this.buttonNext,
-                disabledClass: 'slider__btn--disabled'
+                disabledClass: 'swiper-btn--disabled'
             },
             autoplay: {
                 delay: 6000,

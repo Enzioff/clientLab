@@ -14,10 +14,26 @@
     }
   }
 
+  &--cards {
+    position: relative;
+
+    .swiper {
+      overflow: visible !important;
+    }
+
+    .swiper-control {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1;
+    }
+  }
+
   &--visible {
     .swiper {
       overflow: visible !important;
     }
+
     .swiper-slide {
       width: auto !important;
     }
@@ -68,6 +84,7 @@
     &[disabled] {
       opacity: 1 !important;
     }
+
     opacity: 1;
     background-color: $primary-btn;
     color: $primary;

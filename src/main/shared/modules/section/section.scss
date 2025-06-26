@@ -48,6 +48,10 @@
     }
   }
 
+  &--gradient {
+    background: linear-gradient(107.47deg, #292749 15.62%, #141C24 62.66%);
+  }
+
   &--dark {
     background-color: $black;
   }

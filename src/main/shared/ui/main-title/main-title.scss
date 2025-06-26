@@ -4,4 +4,9 @@
   line-height: 130%;
   letter-spacing: -1%;
   color: $white;
+
+  &--small {
+    font-size: 70px;
+    line-height: 110%;
+  }
 }
