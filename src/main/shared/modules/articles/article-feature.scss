@@ -1,11 +1,32 @@
 .article-feature {
+  position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 750px;
+  width: 100%;
+  max-width: 780px;
   gap: 20px;
   padding: 60px;
   background: $white;
   border-radius: $r-30;
+  border: 15px solid $bg-gray;
+  overflow: hidden;
+
+  @for $i from 2 through 12 {
+    &:nth-child(#{$i}) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    };
+  }
+
+  &__number {
+    position: absolute;
+    bottom: -40px;
+    right: 40px;
+    @include text(rgba($gray, .2), 110px, 700, none, 100%);
+    letter-spacing: -1%;
+  }
 
   &__title {
     @include text($black, 26px, 600, none, 130%);
@@ -16,9 +37,25 @@
     }
   }
 
-  &__text {
+  &__info {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 10px;
+  }
+
+  &__text {
     max-width: 522px;
+    @include text(#848A9B, 18px, 500, none, 150%);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  &__item {
     @include text(#848A9B, 18px, 500, none, 150%);
   }
 

@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger"
 import {ServicesAnimation} from "../animations/services";
+import {FeaturesAnimation} from "../animations/features";
 
 class Animator {
     constructor() {
@@ -11,6 +12,7 @@ class Animator {
         gsap.registerPlugin(ScrollTrigger);
         
         ServicesAnimation.init();
+        FeaturesAnimation.init();
     }
 }
 

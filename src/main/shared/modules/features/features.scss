@@ -1,5 +1,72 @@
 .features {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 120px;
+
+  &__list {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    min-height: 1040px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-top: 90px;
+    padding-bottom: 102px;
+    gap: 20px;
+  }
+
+  &__finish {
+    display: flex;
+    flex-direction: column;
+    max-width: 521px;
+    opacity: 0;
+
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    list-style: disc inside;
+  }
+
+  &__item {
+    @include text(#848A9B, 24px, 500, none, 150%);
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    svg {
+      display: flex;
+      width: 23px;
+      height: 23px;
+    }
+
+    span {
+      @include text($black, 18px, 600, none, 140%);
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    @include text($black, 24px, 600, none, 100%);
+  }
 }
