@@ -1,14 +1,12 @@
 .feedback {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   padding: 60px 130px 60px 100px;
   background-color: #F4F6FB;
-  background-image: url("../assets/images/feedback-bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   border-radius: $r-30;
+  overflow: hidden;
 
   &__header {
     display: flex;
@@ -16,6 +14,7 @@
     gap: 50px;
     width: 100%;
     max-width: 671px;
+    z-index: 1;
 
     .text {
       max-width: 570px;
@@ -28,5 +27,49 @@
     gap: 20px;
     width: 100%;
     max-width: 420px;
+    z-index: 1;
+  }
+
+  &__animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    .feedback__wave {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -50px;
+      display: flex;
+      width: 100%;
+      min-width: 800px;
+      height: 200px;
+    }
+
+    .feedback__bubble {
+      position: absolute;
+      right: 100px;
+      bottom: 30px;
+      display: flex;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      z-index: 0;
+
+      &--2 {
+        right: 620px;
+      }
+
+      &--3 {
+        right: 420px;
+        bottom: -30px;
+      }
+    }
   }
 }

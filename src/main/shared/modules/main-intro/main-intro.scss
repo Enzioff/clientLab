@@ -48,18 +48,19 @@
     width: 100%;
   }
 
-  &__bobbles {
+  &__bubble {
     position: absolute;
-    top: 51px;
-    right: -140px;
-    z-index: 0;
-    pointer-events: none;
+    right: 14px;
+    bottom: 202px;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
   }
 
   &__colb {
     position: absolute;
-    right: -423px;
-    top: 66%;
-    transform: rotate(-36deg);
+    right: -323px;
+    top: 56%;
   }
 }
