@@ -1,0 +1,18 @@
+.modal {
+  cursor: auto !important;
+}
+
+.fancybox-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.fancybox__content {
+  border-radius: 20px;
+}
+
+.fancybox__backdrop {
+  --fancybox-bg: rgba(0, 0, 0, .7);
+}
