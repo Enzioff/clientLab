@@ -4,6 +4,11 @@
   line-height: 150%;
   color: $black;
 
+  @include r($mobile) {
+    font-size: 32px;
+    line-height: 120%;
+  }
+
   &--light {
     color: $white;
   }
@@ -12,5 +17,9 @@
     font-size: 70px;
     letter-spacing: -1px;
     line-height: 110%;
+
+    @include r($mobile) {
+      font-size: 32px;
+    }
   }
 }

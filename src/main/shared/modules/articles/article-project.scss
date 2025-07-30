@@ -26,6 +26,10 @@
     border-radius: $r-20;
     overflow: hidden;
 
+    @include r($mobile) {
+      height: 280px;
+    }
+
     &:hover {
       .article-project__backdrop {
         transform: translateY(10px);

@@ -2,6 +2,10 @@
   li, p, span {
     @include text(#505A65, 18px, 500, none, 170%);
 
+    @include r($mobile) {
+      @include text(#505A65, 16px, 500, none, 120%);
+    }
+
     a {
       font: inherit;
       color: $primary;
@@ -57,5 +61,10 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @include r($mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 }

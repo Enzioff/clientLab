@@ -4,6 +4,11 @@
   grid-template-columns: 880px 1fr;
   gap: 20px;
 
+  @include r($mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__preview {
     position: relative;
     display: flex;
@@ -17,6 +22,11 @@
     background-repeat: no-repeat;
     border-radius: $r-30;
     overflow: hidden;
+
+    @include r($mobile) {
+      padding: 20px 0 0 20px;
+      border-radius: $r-10;
+    }
   }
 
   &__toolbar {
@@ -30,6 +40,11 @@
     flex-shrink: 0;
     width: 1064px;
     pointer-events: none;
+
+    @include r($mobile) {
+      width: 100%;
+      min-width: 600px;
+    }
   }
 
   &__picture {
@@ -54,6 +69,11 @@
     padding: 30px 40px 34px;
     border-radius: $r-30;
     border: 1px solid rgba($white, .5);
+
+    @include r($mobile) {
+      padding: 20px;
+      border-radius: $r-10;
+    }
   }
 
   &__list {
@@ -61,6 +81,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+
+    @include r($mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
 
     &:first-child {
       padding-bottom: 24px;
@@ -76,17 +102,33 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @include r($mobile) {
+      gap: 10px;
+    }
   }
 
   &__value {
     @include text($white, 40px, 700);
+
+    @include r($mobile) {
+      font-size: 20px;
+    }
   }
 
   &__text {
     @include text(rgba($white, .5), 16px, 500);
 
+    @include r($mobile) {
+      font-size: 14px;
+    }
+
     &--accent {
       @include text($white, 18px, 500);
+
+      @include r($mobile) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -97,6 +139,11 @@
     padding: 30px 40px 32px;
     background-color: $white;
     border-radius: $r-30;
+
+    @include r($mobile) {
+      padding: 20px;
+      border-radius: $r-10;
+    }
 
     .portfolio-item__text {
       @include text(rgba($black, .5), 18px, 500, none, 140%);

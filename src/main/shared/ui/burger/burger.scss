@@ -1,0 +1,29 @@
+.burger {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+
+  @include r($mobile) {
+    display: flex;
+  }
+
+  &::before, &::after, &__item {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 3px;
+    background-color: $primary;
+    border-radius: 5px;
+  }
+
+  &__item {
+    top: 10px;
+  }
+
+  &::after {
+    top: 19px;
+  }
+}

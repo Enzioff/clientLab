@@ -12,6 +12,14 @@
   backdrop-filter: blur(3px);
   border: 1px solid rgba($white, .5);
 
+  @include r($mobile) {
+    left: 20px;
+    bottom: 20px;
+    padding: 12px;
+    @include text($white, 16px, 600, none);
+    border-radius: $r-10;
+  }
+
   span {
     text-transform: uppercase;
   }

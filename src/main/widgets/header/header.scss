@@ -4,15 +4,27 @@
   height: 78px;
   background-color: $header-bg;
 
+  @include r($mobile) {
+    height: 60px;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include r($mobile) {
+      height: 100%;
+    }
   }
 
   &__menu {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    @include r($mobile) {
+      flex-direction: column;
+    }
   }
 }

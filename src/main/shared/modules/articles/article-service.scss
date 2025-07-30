@@ -11,11 +11,18 @@
   border: 1px solid $border;
   transition: .2s linear;
 
-  &:hover {
-    transform: rotate(-2deg);
+  @include r($mobile) {
+    padding: 18px;
+    min-height: 180px;
+  }
 
-    .article-service__title {
-      color: $primary;
+  @include rmin($mobile + 1) {
+    &:hover {
+      transform: rotate(-2deg);
+
+      .article-service__title {
+        color: $primary;
+      }
     }
   }
 
@@ -34,12 +41,30 @@
     }
 
     @include defaultHover();
+
+    @include r($mobile) {
+      justify-content: center;
+      min-height: auto;
+
+      @include text($white, 18px, 600);
+
+      border-radius: 10px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 
   &__title {
     @include text($black, 32px, 600);
     letter-spacing: -1px;
     transition: .2s linear;
+
+    @include r($mobile) {
+      @include text($black, 24px, 600);
+    }
   }
 
   &__tags {

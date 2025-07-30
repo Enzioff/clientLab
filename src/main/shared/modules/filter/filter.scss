@@ -8,6 +8,10 @@
     @include text($gray, 18px, 600, none, 150%);
     letter-spacing: -2%;
 
+    @include r($mobile) {
+      @include text($gray, 16px, 600, none, 120%);
+    }
+
     &.active {
       color: $blue;
     }

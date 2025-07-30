@@ -7,6 +7,11 @@
   overflow: hidden;
   border-radius: $r-20;
 
+  @include r($mobile) {
+    height: 240px;
+    border-radius: $r-10;
+  }
+
   img {
     @include coverFull();
   }

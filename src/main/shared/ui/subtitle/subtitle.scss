@@ -7,8 +7,17 @@
   letter-spacing: 0;
   color: $white;
 
+  @include r($mobile) {
+    max-width: 600px;
+    font-size: 18px;
+  }
+
   &--big {
     @include text($white, 32px, 500, none, 130%);
+
+    @include r($mobile) {
+      font-size: 20px;
+    }
   }
 
   &--gray {

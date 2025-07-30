@@ -7,7 +7,7 @@
     <section class="section section--main-intro" style="--background: url('../assets/images/main-bg.png')">
         <div class="container">
             <div class="main-intro">
-                <div class="main-intro__meta">
+                <div class="main-intro__meta order-mob-1">
                     <div class="main-intro__nav">
                         <a href="mailto:unreal@mail.ru" class="link">unreal@mail.ru</a>
                         <a href="tel:+740121016132" class="link">8 (4012) 101-61-32</a>
@@ -36,7 +36,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="main-intro__info">
+                <div class="main-intro__info order-mob-0">
                     <h1 class="main-title">
                         Комплексный<br>
                         интернет-маркетинг
@@ -47,13 +47,13 @@
                         и консалтинга
                     </p>
                 </div>
-                <button class="button">
+                <button class="button order-mob-0">
                     <span>Подать заявку</span>
                     <svg>
                         <use xlink:href="./assets/sprite.svg#icon-arrow-right"></use>
                     </svg>
                 </button>
-                <div class="main-intro__marque">
+                <div class="main-intro__marque order-mob-2">
                     <p class="text text--light">
                         просто компании, которым мы помогли...
                     </p>
@@ -124,11 +124,11 @@
             </div>
         </div>
     </section>
-    <section class="section section--gray section--round section--offset pt-161 pb-269" style="--offset-count: 20px;">
+    <section class="section section--gray section--round section--offset pt-161 ptm-30 pb-269 pbm-50" style="--offset-count: 20px;">
         <div class="container">
-            <div class="slider slider--visible mb-150" data-slider="default">
+            <div class="slider slider--visible mb-150 mbm-40" data-slider="default">
                 <div class="swiper">
-                    <div class="header-block mb-50">
+                    <div class="header-block mb-50 mbm-30">
                         <h2 class="title">Выгодное предложение</h2>
                         <div class="swiper-control">
                             <button class="swiper-btn swiper-btn--prev">
@@ -375,7 +375,7 @@
                     </div>
                 </div>
             </div>
-            <div class="header-block mb-50">
+            <div class="header-block mb-50 mbm-30">
                 <h2 class="title">Услуги</h2>
             </div>
             <div class="grid">
@@ -497,9 +497,9 @@
             </div>
         </div>
     </section>
-    <section class="section section--offset section--round pt-150 pb-160" style="--offset-count: 136px;">
+    <section class="section section--offset section--round pt-150 ptm-30 pb-160 pbm-50" style="--offset-count: 136px;">
         <div class="container">
-            <div class="evaluation mb-160">
+            <div class="evaluation mb-160 mbm-40">
                 <div class="evaluation__info">
                     <h2 class="title">Оцените проект за секунды</h2>
                     <ul class="evaluation__list">
@@ -524,10 +524,18 @@
                     <img class="evaluation__widget" src="./assets/images/widget.png" alt="">
                 </div>
             </div>
-            <div class="header-block mb-50">
+            <div class="header-block mb-50 mbm-30">
                 <h2 class="title">Комплексный подход в примерах</h2>
             </div>
             <div class="examples" data-tabs>
+                <select class="examples__select" data-tabs-select>
+                    <option>Земельные участки</option>
+                    <option>Квартиры в новостройках</option>
+                    <option>Кредиты, займы</option>
+                    <option>Натяжные потолки</option>
+                    <option>Юридические услуги</option>
+                    <option>Ремонт и строительство</option>
+                </select>
                 <div class="examples__tabs">
                     <button class="examples__tab active" data-tabs-head>Земельные участки</button>
                     <button class="examples__tab" data-tabs-head>Квартиры в новостройках</button>
@@ -805,10 +813,10 @@
             </div>
         </div>
     </section>
-    <section class="section section--round section--offset section--dark pt-120 pb-230"
+    <section class="section section--round section--offset section--dark pt-120 ptm-40 pb-230 pbm-60"
              style="--background: url('../assets/images/gradient-bg.png')">
         <div class="container">
-            <div class="portfolio mb-180">
+            <div class="portfolio mb-180 mbm-60">
                 <div class="slider slider--overflow" data-slider="default" data-offset="130">
                     <div class="swiper">
                         <div class="header-block mb-40">
@@ -1142,11 +1150,11 @@
             <div class="conversion">
                 <div class="header-block">
                     <div class="grid grid--center">
-                        <div class="grid__item grid__item--6">
+                        <div class="grid__item grid__item--6 grid__item-mob--4">
                             <h2 class="title title--light">Хватит платить за то, что не несёт пользы вашему бизнесу</h2>
                         </div>
                         <div class="grid__item grid__item--1 mob-hidden"></div>
-                        <div class="grid__item grid__item--5">
+                        <div class="grid__item grid__item--5 grid__item-mob--4">
                             <p class="text text--offset text--light">
                                 Мы предлагаем решения, направленные на рост вашего бизнеса и достижение конкретных
                                 целей. С нами
@@ -1222,17 +1230,17 @@
             </div>
         </div>
     </section>
-    <section class="section section--round section--offset section--gray pt-150 pb-220">
+    <section class="section section--round section--offset section--gray pt-150 ptm-40 pb-220 pbm-50">
         <div class="container">
             <%= htmlWebpackPlugin.options.widgets.features %>
             <div class="reviews">
                 <div class="header-block mb-43">
                     <div class="grid">
-                        <div class="grid__item grid__item--5">
+                        <div class="grid__item grid__item--5 grid__item-mob--4">
                             <h2 class="title">Отзывы наших клиентов</h2>
                         </div>
                         <div class="grid__item grid__item--1 mob-hidden"></div>
-                        <div class="grid__item grid__item--6">
+                        <div class="grid__item grid__item--6 grid__item-mob--4">
                             <p class="subtitle subtitle--big subtitle--gray">
                                 Есть еще сомнения?
                                 Можете посмотреть отзывы наших довольных клиентов.
@@ -1322,10 +1330,10 @@
             </div>
         </div>
     </section>
-    <section class="section section--round section--offset pt-110 pb-130">
+    <section class="section section--round section--offset pt-110 ptm-40 pb-130 pbm-60">
         <div class="container">
-            <div class="grid mb-120">
-                <div class="grid__item grid__item--4">
+            <div class="grid mb-120 mbm-40">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
                     <div class="header-block header-block--column mb-40">
                         <h2 class="title">Вопрос-ответ</h2>
                         <p class="subtitle subtitle--gray">
@@ -1340,7 +1348,7 @@
                         </svg>
                     </a>
                 </div>
-                <div class="grid__item grid__item--8">
+                <div class="grid__item grid__item--8 grid__item-mob--4">
                     <div class="faq">
                         <div class="faq__item">
                             <div class="faq__header">
@@ -1411,7 +1419,7 @@
                     </div>
                 </div>
             </div>
-            <div class="feedback mb-160">
+            <div class="feedback mb-160 mbm-80">
                 <div class="feedback__header">
                     <h2 class="title">
                         Не нашли нужный вопрос? Напишите нам

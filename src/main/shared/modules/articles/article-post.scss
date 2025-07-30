@@ -12,6 +12,11 @@
     overflow: hidden;
     border-radius: $r-20;
 
+    @include r($mobile) {
+      height: 240px;
+      border-radius: $r-10;
+    }
+
     img {
       @include coverFull();
     }
@@ -26,6 +31,10 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
+
+    @include r($mobile) {
+      @include text($black, 24px, 600, none, 100%);
+    }
 
     &:hover {
       opacity: .7;

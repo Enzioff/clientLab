@@ -1,0 +1,23 @@
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  height: calc(100% - 60px);
+  padding: 20px;
+  background-color: $white;
+  flex-direction: column;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s linear, visibility .2s linear;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

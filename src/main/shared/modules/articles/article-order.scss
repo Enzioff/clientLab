@@ -7,6 +7,11 @@
   background-color: $bg-gray;
   border: 1px solid #E3E0FF;
 
+  @include r($mobile) {
+    padding: 20px;
+    border-radius: $r-10;
+  }
+
   &--accent {
     background: linear-gradient(268.29deg, #292749 42.9%, #141C24 75.94%);
 
@@ -23,6 +28,11 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
+    @include r($mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__info {
@@ -43,6 +53,10 @@
   &__price {
     @include text($primary, 32px, 600, none, 150%);
     letter-spacing: -1%;
+
+    @include r($mobile) {
+      @include text($primary, 24px, 600, none, 130%);
+    }
   }
 
   &__head {
@@ -52,5 +66,9 @@
 
   &__text {
     @include text($black, 20px, 500, none, 140%);
+
+    @include r($mobile) {
+      @include text($black, 16px, 500, none, 120%);
+    }
   }
 }

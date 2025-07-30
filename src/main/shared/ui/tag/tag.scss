@@ -9,7 +9,11 @@
 
   &--big {
     padding: 8px 18px;
-    @include text($blue-dark-second, 18px, 600, none, 150%)
+    @include text($blue-dark-second, 18px, 600, none, 150%);
+
+    @include r($mobile) {
+      @include text($blue-dark-second, 14px, 600, none, 100%)
+    }
   }
 
   &--light {
@@ -21,7 +25,11 @@
   }
 
   &--medium {
-    @include text($blue-dark, 16px, 500, none, 100%)
+    @include text($blue-dark, 16px, 500, none, 100%);
+
+    @include r($mobile) {
+      @include text($blue-dark-second, 14px, 500, none, 100%)
+    }
   }
 
   &--primary {

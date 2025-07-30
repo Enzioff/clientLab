@@ -15,6 +15,8 @@ class IntroAnimation {
             const bubbleTl3 = gsap.timeline({repeat: -1, delay: 5, ease: "none", smoothChildTiming: true})
             const bubbleTl4 = gsap.timeline({repeat: -1, delay: 6, ease: "none", smoothChildTiming: true})
             
+            if (window.innerWidth < 1200) return;
+            
             gsap
                 .to(colb, {
                     transformOrigin: "bottom",

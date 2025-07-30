@@ -8,6 +8,8 @@ class ServicesAnimation {
         const benefits = triggerContainer.querySelectorAll(".article-benefit");
         const offset = 200;
         
+        if (window.innerWidth < 1200) return;
+        
         benefits.forEach((element, idx) => {
             element.classList.add('shadow')
             gsap.to(element, {

@@ -10,6 +10,11 @@
   border-radius: $r-20;
   border: 1px solid $border;
 
+  @include r($mobile) {
+    padding: 20px;
+    border-radius: $r-10;
+  }
+
   &__title {
     margin-bottom: 16px;
     @include text($black, 24px, 700, none, 130%);

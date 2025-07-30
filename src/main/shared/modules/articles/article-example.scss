@@ -4,16 +4,31 @@
   background-color: $bg-gray;
   overflow: hidden;
 
+  @include r($mobile) {
+    flex-direction: column;
+    width: 100%;
+    border-radius: $r-10;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding: 70px;
+
+    @include r($mobile) {
+      gap: 20px;
+      padding: 20px;
+    }
   }
 
   &__title {
     @include text($black, 40px, 600);
     letter-spacing: -1px;
+
+    @include r($mobile) {
+      @include text($black, 32px, 600);
+    }
   }
 
   &__list {
@@ -47,6 +62,10 @@
     width: 100%;
     border-radius: $r-30;
     overflow: hidden;
+
+    @include r($mobile) {
+      border-radius: $r-10;
+    }
 
     img {
       @include coverFull();

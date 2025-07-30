@@ -10,6 +10,14 @@
   overflow: hidden;
   transition: box-shadow .2s linear;
 
+  @include r($mobile) {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+    border-radius: $r-10;
+  }
+
   &:nth-child(even) {
     background: linear-gradient(268.29deg, #292749 42.9%, #141C24 75.94%);
   }
@@ -35,6 +43,10 @@
     align-items: flex-start;
     gap: 20px;
     z-index: 1;
+
+    @include r($mobile) {
+      gap: 10px;
+    }
   }
 
   &__tags {
@@ -46,6 +58,10 @@
   &__title {
     @include text($white, 50px, 600, none, 130%);
     letter-spacing: -1%;
+
+    @include r($mobile) {
+      @include text($white, 32px, 600, none, 100%);
+    }
   }
 
   &__price {
@@ -68,5 +84,9 @@
     transform: translateX(-50%);
     mix-blend-mode: luminosity;
     z-index: 0;
+
+    @include r($mobile) {
+      opacity: 0;
+    }
   }
 }

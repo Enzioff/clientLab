@@ -13,7 +13,7 @@
             <a href="/" class="logo">
                 <img src="./assets/images/logo.svg" alt="">
             </a>
-            <nav class="nav">
+            <nav class="nav mob-hidden">
                 <a href="#" class="nav__link">
                     <span>Услуги</span>
                     <svg class="nav__icon">
@@ -36,10 +36,42 @@
                     <span>Контакты</span>
                 </a>
             </nav>
-            <div class="header__menu">
+            <div class="header__menu mob-hidden">
                 <a href="#" class="button button--light button--small">Заказать звонок</a>
                 <a href="#" class="button button--small">Калькулятор стоимости</a>
             </div>
+            <div class="burger" data-burger>
+                <span class="burger__item"></span>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu" data-mobile-menu>
+        <nav class="nav">
+            <a href="#" class="nav__link">
+                <span>Услуги</span>
+                <svg class="nav__icon">
+                    <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                </svg>
+            </a>
+            <a href="#" class="nav__link">
+                <span>О компании</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Портфолио</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Блог</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Отзывы</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Контакты</span>
+            </a>
+        </nav>
+        <div class="header__menu">
+            <a href="#" class="button button--light button--small">Заказать звонок</a>
+            <a href="#" class="button button--small">Калькулятор стоимости</a>
         </div>
     </div>
 </header>

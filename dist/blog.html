@@ -13,7 +13,7 @@
             <a href="/" class="logo">
                 <img src="./assets/images/logo.svg" alt="">
             </a>
-            <nav class="nav">
+            <nav class="nav mob-hidden">
                 <a href="#" class="nav__link">
                     <span>Услуги</span>
                     <svg class="nav__icon">
@@ -36,19 +36,51 @@
                     <span>Контакты</span>
                 </a>
             </nav>
-            <div class="header__menu">
+            <div class="header__menu mob-hidden">
                 <a href="#" class="button button--light button--small">Заказать звонок</a>
                 <a href="#" class="button button--small">Калькулятор стоимости</a>
             </div>
+            <div class="burger" data-burger>
+                <span class="burger__item"></span>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-menu" data-mobile-menu>
+        <nav class="nav">
+            <a href="#" class="nav__link">
+                <span>Услуги</span>
+                <svg class="nav__icon">
+                    <use xlink:href="./assets/sprite.svg#icon-arrow-down"></use>
+                </svg>
+            </a>
+            <a href="#" class="nav__link">
+                <span>О компании</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Портфолио</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Блог</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Отзывы</span>
+            </a>
+            <a href="#" class="nav__link">
+                <span>Контакты</span>
+            </a>
+        </nav>
+        <div class="header__menu">
+            <a href="#" class="button button--light button--small">Заказать звонок</a>
+            <a href="#" class="button button--small">Калькулятор стоимости</a>
         </div>
     </div>
 </header>
 
 <main class="main">
-    <section class="section section--gradient section--intro">
+    <section class="section section--gradient section--intro section--mob-wide">
         <div class="container">
             <div class="main-intro">
-                <div class="main-intro__meta main-intro__meta--offset">
+                <div class="main-intro__meta main-intro__meta--offset order-mob-1">
                     <div class="main-intro__nav">
                         <a href="mailto:unreal@mail.ru" class="link">unreal@mail.ru</a>
                         <a href="tel:+740121016132" class="link">8 (4012) 101-61-32</a>
@@ -77,7 +109,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="main-intro__wrapper">
+                <div class="main-intro__wrapper order-mob-0">
                     <div class="main-intro__info">
                         <div class="author author--light">
                             <picture class="author__picture">
@@ -184,8 +216,8 @@
                     3D Визуализация
                 </a>
             </div>
-            <div class="grid mb-96">
-                <div class="grid__item grid__item--4">
+            <div class="grid mb-96 mbm-40">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
                     <article class="article-post">
                         <picture class="article-post__picture">
                             <img src="./assets/images/post-1.png" alt="">
@@ -211,7 +243,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="grid__item grid__item--4">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
                     <article class="article-post">
                         <picture class="article-post__picture">
                             <img src="./assets/images/post-1.png" alt="">
@@ -237,7 +269,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="grid__item grid__item--4">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
                     <article class="article-post">
                         <picture class="article-post__picture">
                             <img src="./assets/images/post-1.png" alt="">
@@ -263,7 +295,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="grid__item grid__item--4">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
                     <article class="article-post">
                         <picture class="article-post__picture">
                             <img src="./assets/images/post-1.png" alt="">
@@ -289,7 +321,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="grid__item grid__item--4">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
                     <article class="article-post">
                         <picture class="article-post__picture">
                             <img src="./assets/images/post-1.png" alt="">
@@ -315,7 +347,7 @@
                         </div>
                     </article>
                 </div>
-                <div class="grid__item grid__item--4">
+                <div class="grid__item grid__item--4 grid__item-mob--4">
                     <article class="article-post">
                         <picture class="article-post__picture">
                             <img src="./assets/images/post-1.png" alt="">
@@ -361,9 +393,9 @@
             </div>
         </div>
     </section>
-    <section class="section pt-160 pb-130">
+    <section class="section pt-160 ptm-40 pb-130 pbm-60">
         <div class="container">
-            <div class="feedback mb-160">
+            <div class="feedback mb-160 mbm-0">
                 <div class="feedback__header">
                     <h2 class="title">
                         Не нашли нужный вопрос? Напишите нам

@@ -7,6 +7,7 @@ import Tabs from "./tabs";
 import Bubbles from "./bubbles";
 import Video from "./video";
 import Animator from "./gsap";
+import Menu from "./menu";
 
 class App {
     constructor() {
@@ -23,6 +24,15 @@ class App {
         this.createBubbles()
         this.createVideo()
         this.createAnimator()
+        this.createMenu()
+    }
+    
+    createMenu = () => {
+        const mobileMenu = document.querySelector('[data-mobile-menu]');
+        
+        if (!mobileMenu) return
+        
+        new Menu(mobileMenu);
     }
     
     createAnimator = () => {

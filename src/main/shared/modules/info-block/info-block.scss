@@ -2,11 +2,20 @@
   display: flex;
   gap: 158px;
 
+  @include r($mobile) {
+    flex-direction: column;
+    gap: 40px;
+  }
+
   &__detail {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 600px;
+
+    @include r($mobile) {
+      width: 100%;
+    }
   }
 
   &__list {
@@ -20,6 +29,10 @@
 
   &__item {
     @include text(#848A9B, 18px, 500, none, 180%);
+
+    @include r($mobile) {
+      @include text(#848A9B, 16px, 500, none, 120%);
+    }
   }
 
   &__picture {
@@ -33,6 +46,13 @@
     border-radius: $r-20;
     overflow: hidden;
     border: 15px solid #262A4B0D;
+
+    @include r($mobile) {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      border-width: 1px;
+    }
 
     img {
       @include coverFull();

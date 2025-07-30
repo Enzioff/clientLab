@@ -14,6 +14,11 @@
     border-radius: 50px;
     overflow: hidden;
 
+    @include r($mobile) {
+      height: auto;
+      border-radius: 0;
+    }
+
     .container {
       height: 100%;
     }
@@ -27,6 +32,10 @@
     background-color: $black;
     border-radius: 50px;
     overflow: hidden;
+
+    @include r($mobile) {
+      border-radius: 0;
+    }
 
     &::before {
       content: "";
@@ -62,10 +71,22 @@
 
   &--round {
     border-radius: 50px;
+
+    @include r($mobile) {
+      border-radius: 0;
+    }
   }
 
   &--offset {
     --offset-count: 20px;
     margin-top: calc(-1 * var(--offset-count));
+
+    @include r($mobile) {
+      margin-top: 0;
+    }
+  }
+
+  &--mob-wide {
+    height: auto;
   }
 }

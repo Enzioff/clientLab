@@ -11,6 +11,13 @@
   background-color: var(--background-color);
   border-radius: $r-20;
 
+  @include r($mobile) {
+    padding: 20px;
+    max-width: 320px;
+    min-height: auto;
+    height: 100%;
+  }
+
   &--primary {
     --current-color: #{$primary-dark};
   }
@@ -26,11 +33,19 @@
   &__header {
     padding-bottom: 24px;
     border-bottom: 2px solid $line-color;
+
+    @include r($mobile) {
+      padding-bottom: 12px;
+    }
   }
 
   &__title {
     @include text($black, 24px, 700);
     letter-spacing: -1px;
+
+    @include r($mobile) {
+      @include text($black, 20px, 700);
+    }
 
     b {
       color: var(--current-color);
@@ -43,6 +58,10 @@
     gap: 8px;
     padding-top: 24px;
     margin-top: auto;
+
+    @include r($mobile) {
+      padding-top: 12px;
+    }
   }
 
   &__prices {
@@ -54,6 +73,10 @@
   &__price {
     @include text($black, 24px, 700);
     letter-spacing: -1px;
+
+    @include r($mobile) {
+      @include text($black, 20px, 700);
+    }
 
     &--old {
       color: $gray;
@@ -90,5 +113,11 @@
     background: $white;
     border: 3px solid var(--background-color);
     border-radius: 50%;
+
+    @include r($mobile) {
+      width: 42px;
+      height: 42px;
+      padding: 5px;
+    }
   }
 }

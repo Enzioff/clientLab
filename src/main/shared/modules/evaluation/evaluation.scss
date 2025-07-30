@@ -16,6 +16,13 @@
     overflow: hidden;
     z-index: 1;
 
+    @include r($mobile) {
+      max-width: 100%;
+      padding: 20px;
+      background-color: $bg-gray;
+      border-radius: $r-10;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -29,6 +36,9 @@
       transform: skewX(-7deg);
       border-radius: 30px;
       pointer-events: none;
+      @include r($mobile) {
+        display: none;
+      }
     }
 
     &::after {
@@ -41,6 +51,9 @@
       background-color: $bg-gray;
       z-index: 0;
       pointer-events: none;
+      @include r($mobile) {
+        display: none;
+      }
     }
 
     .title {
@@ -64,6 +77,10 @@
     align-items: center;
     gap: 12px;
 
+    @include r($mobile) {
+      @include text($black, 16px, 500);
+    }
+
     &::before {
       content: '';
       display: flex;
@@ -81,6 +98,10 @@
     display: flex;
     margin-left: -509px;
     overflow: hidden;
+
+    @include r($mobile) {
+      display: none;
+    }
   }
 
   &__picture {

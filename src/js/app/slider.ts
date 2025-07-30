@@ -121,7 +121,7 @@ class Slider {
         const slider = this.el.querySelector('.swiper');
         new Swiper(slider, {
             modules: [Navigation, Pagination, Autoplay],
-            slidesPerView: this.slidesCount || 'auto',
+            slidesPerView: 'auto',
             spaceBetween: this.offset || 30,
             navigation: {
                 prevEl: this.buttonPrev,
@@ -133,6 +133,11 @@ class Slider {
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+            },
+            breakpoints: {
+              1200: {
+                  slidesPerView: this.slidesCount || 'auto',
+              }
             },
             on: {
                 init: (swiper: Swiper) => {

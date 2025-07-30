@@ -13,6 +13,10 @@
     border-radius: $r-10;
     overflow: hidden;
 
+    @include r($mobile) {
+      padding: 18px;
+    }
+
     &.active {
       grid-template-rows: auto 1fr;
       padding-bottom: 30px;
@@ -73,6 +77,10 @@
   &__title {
     @include text($black, 24px, 600, none, 120%);
     transition: .2s ease;
+
+    @include r($mobile) {
+      font-size: 18px;
+    }
   }
 
   &__content {
@@ -82,5 +90,9 @@
     @include text(#848A9B, 20px, 500, none, 30px);
     overflow: hidden;
     visibility: hidden;
+
+    @include r($mobile) {
+      @include text(#848A9B, 16px, 500, none, 18px);
+    }
   }
 }

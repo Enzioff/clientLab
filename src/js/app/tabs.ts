@@ -2,11 +2,15 @@ class Tabs {
     tabsContainer;
     headerEls;
     contentEls;
+    selectedTab;
+    selectedTabEls;
     
     constructor(el: Element) {
         this.tabsContainer = el;
         this.headerEls = this.tabsContainer.querySelectorAll('[data-tabs-head]');
         this.contentEls = this.tabsContainer.querySelectorAll('[data-tabs-item]');
+        this.selectedTab = this.tabsContainer.querySelector('[data-tabs-select]');
+        this.selectedTabEls = this.selectedTab.querySelectorAll('option');
         
         this.init()
     }
@@ -20,6 +24,13 @@ class Tabs {
                     this.contentEls.item(idx).classList.add('active');
                 }
             })
+        })
+        
+        this.selectedTab.addEventListener('change', (evt) => {
+            const target = evt.target as HTMLSelectElement;
+            const idx = target.selectedIndex;
+            const currentElement = this.headerEls.item(idx) as HTMLElement;
+            currentElement.click();
         })
     }
     

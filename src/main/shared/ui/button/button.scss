@@ -10,10 +10,16 @@
 
   border-radius: $r-15;
   background-color: $primary;
-
   cursor: pointer;
 
   @include defaultHover();
+
+  @include r($mobile) {
+    min-width: 280px;
+    padding: 18px;
+    @include text($white, 18px, 600, none);
+    border-radius: $r-10;
+  }
 
   &--small {
     min-width: auto;
@@ -27,6 +33,13 @@
     padding: 15px 20px;
     @include text($white, 24px, 600, none, 100%);
     border-radius: $r-15;
+
+    @include r($mobile) {
+      min-width: 280px;
+      padding: 18px;
+      @include text($white, 18px, 600, none);
+      border-radius: $r-10;
+    }
   }
 
   &--aside {
